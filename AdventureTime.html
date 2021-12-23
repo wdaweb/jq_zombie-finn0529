@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' />
     <style>
       *{
         font-family:'Shippori Antique', sans-serif ;
@@ -139,6 +140,14 @@
       transform: translate(-70px,1px);
       cursor: pointer;
     }
+    .space{
+      position: absolute;
+      width: 500px;
+      top: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+    
+    }
     
     </style>
     
@@ -147,9 +156,10 @@
   
   
     <div id="game" style="background: url(./image/35667_adventure_time.jpg)no-repeat center center/cover;">
-      <div class="start">
+      <div class="start wow animate__zoomIn">
         <img src="./image/Adventure-Time-Logo.png" alt="" class="logo">
         <img src="./image/start.png"id="btn-start">
+        <img src="./image/操控.png" alt="" class="space">
       </div>
       
 
@@ -171,8 +181,21 @@
       </div>
 
     </div>
-    <script src="../jquery-3.6.0min.js"></script>
+    <script src="./js/jquery-3.6.0min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+      var wow = new WOW(
+        {
+          boxClass: 'wow',      // default
+          animateClass: 'animate__animated',
+          offset: 0,          // default
+          mobile: true,       // default
+          live: true        // default
+        }
+      )
+      wow.init();
+    </script>
     <script>
       
       
